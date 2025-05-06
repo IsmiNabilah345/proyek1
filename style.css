@@ -1,0 +1,205 @@
+:root {
+    --blue-dark:    #1A4D6D;
+    --blue-mid:     #2A7A9D;
+    --blue-light:   #4A9BBE;
+    --yellow:       #FFE74C;
+    --white:        #ffffff;
+    --gray:         #f2f2f2;
+  }
+  
+  /* Reset & base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue-dark);
+  }
+  .logo span {
+    color: var(--yellow);
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--blue-dark);
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover {
+    color: var(--blue-mid);
+  }
+  .btn-download {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--blue-dark);
+    border-radius: 20px;
+    color: var(--blue-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+  }
+  .btn-download:hover {
+    background: var(--blue-dark);
+    color: var(--white);
+  }
+  
+  /* HERO */
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('https://source.unsplash.com/1600x900/?pharmacy') no-repeat center/cover;
+    position: relative;
+    color: var(--white);
+    padding-top: 70px;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(26,188,156,0.9),
+      rgba(26,188,156,0.7)
+    );
+  }
+  .hero-content {
+    position: relative;
+    max-width: 600px;
+  }
+  .tagline {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--yellow);
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  }
+  .hero h1 span {
+    color: var(--yellow);
+    display: inline-block;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
+  .btn-cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--yellow);
+    color: var(--blue-dark);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .btn-cta:hover {
+    background: var(--blue-light);
+    color: var(--white);
+  }
+  
+  /* SCROLL INDICATOR */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--yellow);
+    font-size: 0.9rem;
+  }
+  .indicator-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* SECTIONS */
+  .section {
+    padding: 6rem 0;
+    background: var(--gray);
+    text-align: center;
+  }
+  .section:nth-of-type(even) {
+    background: var(--white);
+  }
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--blue-dark);
+  }
+  .section p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* SERVICES */
+  .service-items {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  .item .icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--blue-mid);
+  }
+  .item p {
+    font-weight: 600;
+    color: var(--blue-dark);
+  }
+  
+  /* FOOTER */
+  .footer {
+    background: var(--blue-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  
+  @keyframes flash {
+    0%   { box-shadow: 0 0 0 rgba(74,155,190,0.5); }
+    50%  { box-shadow: 0 0 20px rgba(74,155,190,0.8); }
+    100% { box-shadow: 0 0 0 rgba(74,155,190,0.5); }
+  }
+  .flash {
+    animation: flash 0.6s ease-out;
+  }
+  
