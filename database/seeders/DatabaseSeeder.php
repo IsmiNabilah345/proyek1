@@ -14,6 +14,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
+        
+        DB::table('roles')->insert([
+            ['id' => 1, 'name' => 'admin'],
+            ['id' => 2, 'name' => 'kurir'],
+        ]);
+
 
         User::factory()->create([
             'name' => 'Test User',

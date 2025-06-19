@@ -180,6 +180,11 @@
               <li><a class="dropdown-item" href="#">Company Profile</a></li>
               <li><a class="dropdown-item" href="#">Contact Us</a></li>
             </ul>
+          <!-- LogIn -->
+          <li class="nav-item mx-2">
+              <a class="nav-link" href="{{ route('login') }}">
+                  <i class="fa-solid fa-right-to-bracket"></i> Log In
+              </a>
           </li>
         </ul>
       </div>
@@ -204,7 +209,7 @@
         <!-- Kontak -->
         <div class="col-md-4 mb-3">
           <h6>Kontak Kami</h6>
-          <p>Jl. Merdeka No.1<br>Jakarta<br>0812-3456-7890</p>
+          <p>Jl. Soekarno-Hatta No.187 b, Babakan Ciparay, Kec. Babakan Ciparay, <br>Kota Bandung, Jawa Barat 40223<br>0852-9478-7674</p>
         </div>
         <!-- Link Cepat -->
         <div class="col-md-4 mb-3">
